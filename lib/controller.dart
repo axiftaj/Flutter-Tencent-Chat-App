@@ -21,7 +21,7 @@ class TIMUIKitService {
   // Initialization method
   void initTIMUIKIT() {
     _coreInstance.init(
-      sdkAppID: 20017096, // Replace with your Tencent Cloud Chat application SDKAppID
+      sdkAppID: 000000, // Replace with your Tencent Cloud Chat application SDKAppID
       loglevel: LogLevelEnum.V2TIM_LOG_DEBUG,
       listener: V2TimSDKListener(
         onConnectFailed: (code, error) {
