@@ -2,7 +2,7 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:tencent_chat_sdk_tutorial/add_friend_screen.dart';
+import 'package:tencent_chat_sdk_tutorial/users_screen.dart';
 import 'package:tencent_cloud_chat_uikit/business_logic/model/profile_model.dart';
 
 import 'package:tencent_cloud_chat_uikit/tencent_cloud_chat_uikit.dart';

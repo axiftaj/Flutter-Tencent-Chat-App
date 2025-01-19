@@ -1,4 +1,5 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:tencent_cloud_chat_uikit/tencent_cloud_chat_uikit.dart';
 
 
@@ -24,19 +25,19 @@ class TIMUIKitService {
       loglevel: LogLevelEnum.V2TIM_LOG_DEBUG,
       listener: V2TimSDKListener(
         onConnectFailed: (code, error) {
-          print("Connection failed: $error ($code)");
+          debugPrint("Connection failed: $error ($code)");
         },
         onConnectSuccess: () {
-          print("Connected successfully.");
+          debugPrint("Connected successfully.");
         },
         onConnecting: () {
-          print("Connecting...");
+          debugPrint("Connecting...");
         },
         onKickedOffline: () {
-          print("Kicked offline.");
+          debugPrint("Kicked offline.");
         },
         onSelfInfoUpdated: (V2TimUserFullInfo info) {
-          print("Self info updated: ${info.toJson()}");
+          debugPrint("Self info updated: ${info.toJson()}");
         },
         onUserSigExpired: () {
           print("User signature expired.");
@@ -49,9 +50,9 @@ class TIMUIKitService {
   Future<void> login(String userID, String userSig) async {
     try {
       final response = await _coreInstance.login(userID: userID, userSig: userSig);
-      print("Login successful: ${response.toJson()}");
+      debugPrint("Login successful: ${response.toJson()}");
     } catch (e) {
-      print("Login failed: $e");
+      debugPrint("Login failed: $e");
     }
   }
 }

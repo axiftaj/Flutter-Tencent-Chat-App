@@ -3,14 +3,14 @@ import 'package:tencent_chat_sdk_tutorial/profile_screen.dart';
 import 'package:tencent_cloud_chat_uikit/tencent_cloud_chat_uikit.dart';
 
 
-class AddFriendScreen extends StatefulWidget {
+class UsersScreen extends StatefulWidget {
+  const UsersScreen({super.key});
+
   @override
-  State<AddFriendScreen> createState() => _AddFriendScreenState();
+  State<UsersScreen> createState() => _UsersScreenState();
 }
 
-class _AddFriendScreenState extends State<AddFriendScreen> {
-
-
+class _UsersScreenState extends State<UsersScreen> {
 
   @override
   Widget build(BuildContext context) {
